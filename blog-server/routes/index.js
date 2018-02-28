@@ -17,7 +17,7 @@ router.get('/', function(req, res, next)
   {
     assert.equal(null, err);
   });
-  res.render('index', { title: 'Express' });
+  res.render('login', { title: 'Express' });
 });
 
 
