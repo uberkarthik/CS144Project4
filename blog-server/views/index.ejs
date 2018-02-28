@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+<ul>
+    <% let holder = 0; %>
+    <% for(let i = 0; i < Posts.length || i >= 5; i++) { %>
+            <a href='<%= Posts[i].postid %>'> <%-Posts[i].title%></a>
+    <% } %>
+</ul>
+<%if (Posts.length >= 5) { %>
+        <a id="next" href="/blog/cs144?start=<%- String(Posts[5].postid) %>" >
+        next
+        </a>
+<% } %>
+</body>
+</html>
